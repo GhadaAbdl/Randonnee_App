@@ -1,0 +1,135 @@
+{% extends "@Admin/template.html.twig" %}
+
+{% block wrapper %}
+
+    <link rel="stylesheet" href="{{ asset('BoutiqueAssets/css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('BoutiqueAssets/css/slider.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('BoutiqueAssets/css/owl.carousel.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('BoutiqueAssets/css/owl.theme.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('BoutiqueAssets/css/font-awesome.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('BoutiqueAssets/css/style.css') }}" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <div class="page">
+        <section class="main-container col1-layout">
+            <div class="main container">
+                <div class="col-main">
+                    <div class="cart">
+                        <div class="page-title">
+                            <h2>Votre reclamations</h2>
+                        </div>
+                        <div class="table-responsive">
+                            <form method="post" action="#updatePost/">
+                                <input type="hidden" value="Vwww7itR3zQFe86m" name="form_key">
+                                <fieldset>
+
+                                    <table class="data-table cart-table" id="shopping-cart-table">
+
+                                        <thead>
+                                        <tr class="first left">
+                                            <th rowspan="3">&nbsp;</th>
+                                            <td rowspan="3"><span class="nobr"></span>Objet</td>
+
+                                            <td rowspan="3" class="a-center"><span class="nobr">Messages</span></td>
+
+                                            <td colspan="3" class="a-center"><span class="nobr">Etat</span></td>
+                                            <th class="a-center" rowspan="3">&nbsp;</th>
+                                        </tr>
+                                        </thead>
+                                        <tfoot>
+                                        <tr class="first last">
+                                            <td class="a-right last" colspan="50"><a href="" class="button btn-continue" title="Continue Shopping" ><span><span>Revenir</span></span></a>
+                                                <button id="empty_cart_button" class="button btn-empty" title="Clear Cart" value="empty_cart" name="update_cart_action" type="submit"><span><span>Supprimer  les reclamations</span></span></button>
+
+                                        </tr>
+                                        </tfoot>
+                                        <tbody>
+                                        {% for reclamation in reclamations %}
+
+
+                                            <tr class="first odd">
+
+                                                <td class="image"><a class="product-image" title="Sample Product" href="product_detail.html"><img width="75" alt="Sample Product" src="{{ asset('images/sac.png') }}"></a></td>
+                                                <td><h2 class="product-name"> <a href="product_detail.html"></a>{{ reclamation.objet }}</h2></td>
+                                                <td><h2 class="product-name"> <a href="product_detail.html"></a>{{ reclamation.message }}</h2></td>
+                                                <td><h2 class="product-name"> <a href="product_detail.html"></a>{{ reclamation.etat}}</h2></td>
+
+                                                <td class="a-center right"><a title="Edit item parameters" class="edit-bnt" href="{{ path('admin_trait',{'id':reclamation.id}) }}"></a></td>
+
+                                                <td class="a-center right"><a class="button remove-item" title="Remove item" href="{{ path('admin_trait_supp',{'id':reclamation.id}) }}"><span><span>Supprimer produit</span></span></a></td>
+                                            </tr>
+
+
+
+
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                    {#{{ 3.2|rating }}#}
+                                </fieldset>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="{{ asset('ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('IdeatoStarRatingBundle/Resources/public/jquery.raty.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('IdeatoStarRatingBundle/Resources/public/jquery.starrating.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('BoutiqueAssets/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('BoutiqueAssets/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('BoutiqueAssets/js/common.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('BoutiqueAssets/js/slider.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('BoutiqueAssets/js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

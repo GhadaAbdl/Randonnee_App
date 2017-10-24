@@ -1,0 +1,48 @@
+#admin_login:
+#    path:     /login
+#    defaults: { _controller: AdminBundle:Default:login }
+#
+#
+admin_index:
+    path:     /
+    defaults: { _controller: AdminBundle:Default:index }
+admin_list_users:
+    path:     /list/users
+    defaults: { _controller: AdminBundle:Default:listUsers }
+admin_profile:
+    path:     /profile
+    defaults: { _controller: AdminBundle:Default:profile }
+admin_dashboard:
+    path:     /dashboard
+    defaults: { _controller: AdminBundle:Default:dashboard }
+admin_access_denied:
+    path:     /ad
+    defaults: { _controller: AdminBundle:Default:accessDenied }
+
+
+
+admin_recalam:
+    path:     /adminReclam
+    defaults: { _controller: AdminBundle:Reclamation:adminReclam}
+
+admin_trait:
+     path:     /adminTrait/{id}
+     defaults: { _controller: AdminBundle:Reclamation:traiterRec}
+
+admin_trait_supp:
+    path:     /adminsupp/{id}
+    defaults: { _controller: AdminBundle:Reclamation:suppReclamAdmin}
+
+
+admin_type_rando:
+    path:     /typeRando/list
+    defaults: { _controller: AdminBundle:TypeRando:list }
+admin_type_rando_ajout:
+    path:     /typeRando/ajout
+    defaults: { _controller: AdminBundle:TypeRando:create }
+admin_type_rando_modefication:
+    path:     /typeRando/update/{id}
+    defaults: { _controller: AdminBundle:TypeRando:update }
+admin_type_rando_supp:
+    path:     /typeRando/delete/{id}
+    defaults: { _controller: AdminBundle:TypeRando:delete }
